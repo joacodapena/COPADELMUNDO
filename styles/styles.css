@@ -1,0 +1,364 @@
+/* Reset de CSS - lo dejo como comentario porque no me convencio como queda */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Fuente de texto del body y color de fondo */
+body {
+    font-family: "Overpass", serif;
+    background-color: #f3f3f3;
+}
+
+/* Color de letra de los parrafos del body */
+body p {
+    color: #727272;
+    font-size: large;
+}
+
+h1 {
+    font-weight: 400;
+    text-align: center;
+    padding: 36px;
+    color: rgb(1, 1, 66);
+}
+
+h2 {
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 5px;
+    color: rgb(1, 1, 66);
+}
+
+/* Ajustes de fuente de la barra de navegación */
+.logo {
+    width: 150px;
+    height: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 3px solid #727272;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-right: 20px;
+}
+
+.nav-li {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(1, 1, 66);
+}
+
+/* INDEX - Contenido principal */
+.p-index {
+    padding-bottom: 12px;
+    margin: 0 120px;
+    text-align: center;
+}
+
+.h2-index {
+    text-align: start;
+}
+
+hr {
+    width: 60%;
+    margin: 20px auto;
+    border: 1px solid #727272;
+}
+
+.p2-index {
+    margin-bottom: 12px;
+}
+
+.main1 {
+    grid-area: main1;
+    margin-left: 16px
+
+}
+
+.main2 {
+    grid-area: main2;
+    margin-left: 16px;
+}
+
+.video-container {
+    margin: 32px 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    grid-area: video-container
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 12px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 250px);
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "main1 video-container video-container"
+    "main2 video-container video-container";
+    padding: 24px 0;
+    margin-top: 24px;
+}
+
+/* MEDIA QUERIES INDEX */
+@media (max-width: 700px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 150px);
+        grid-template-areas: 
+        "main1"
+        "video-container"
+        "main2";
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 60px;
+    }
+    .main-content p {
+        font-size: 16px;
+        margin: 0 32px;
+    }
+    .main-content h2 {
+        font-size: 20px;
+    }
+    .video {
+        width: 500px;
+        height: 250px;
+        padding-bottom: 24px;
+    }
+    h2 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .h2-index {
+        text-align: center;
+    }
+
+    .main-content div {
+        margin: 0;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 820px) {
+    .main-content p {
+        font-size: 12px;
+    }
+    .main-content h2 {
+        font-size: 14px;
+    }
+    .main-content {
+        grid-template-rows: repeat(2, 140px);
+    }
+    .video {
+        width: 500px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 960px) {
+    .main-content p {
+        font-size: 14px;
+    }
+    .main-content h2 {
+        font-size: 16px;
+    }
+    .main-content {
+        grid-template-rows: repeat(2, 170px);
+    }
+    .video {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1165px) {
+    .main-content p {
+        font-size: 16px;
+    }
+    .main-content h2 {
+        font-size: 20px;
+    }
+    .main-content {
+        grid-template-rows: repeat(2, 190px);
+    }
+    .video {
+        width: 700;
+        height: 350px;
+    }
+}
+
+/* HISTORIAL */
+.h1-historial {
+    padding-bottom: 12px;
+}
+
+.p-historial {
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.h2-historial {
+    font-weight: 400;
+    padding-bottom: 12px;
+}
+
+.main1-historial {
+    padding: 20px 12px 0 18px;
+    grid-area: main1-hist;
+}
+
+.main2-historial {
+    padding: 32px 12px 0 18px;
+    grid-area: main2-hist;
+}
+
+.uruguay {
+    grid-area: uruguay;
+}
+
+.uru-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.main-content-historial {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    justify-content: center;
+    grid-template-areas: 
+    "uruguay main1-hist main1-hist"
+    "uruguay main2-hist main2-hist";
+    padding: 24px;
+}
+
+h3 {
+    color: rgb(1, 1, 66);
+    text-align: center;
+    padding-top: 32px;
+}
+
+table {
+    text-align: left;
+}
+
+.table1 th:nth-child(2), .table1 td:nth-child(2) {
+    width: 200px;
+}
+
+.table1 th:nth-child(1), .table1 td:nth-child(1) {
+    width: 250px;
+}
+
+.table2 th:nth-child(1), .table2 td:nth-child(1) {
+    width: 150px;
+}
+
+.table2 th:nth-child(2), .table2 td:nth-child(2) {
+    width: 150px;
+}
+
+.messi {
+    width: 300px;
+} 
+
+.titulo-tabla {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgb(1, 1, 66);
+    padding-bottom: 8px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+    padding-top: 36px;
+}
+
+/* Estadisticas */
+.h1-estadisticas {
+    font-weight: 400;
+    text-align: center;
+}
+
+.h2-estadisticas {
+    font-weight: 400;
+}
+
+ol {
+    color: #727272;
+}
+
+
+
+.goles2010 {
+    text-decoration: none;
+    color: rgb(1, 1, 66);
+}
+
+/* Pestaña Datos */
+.h1-datos {
+    font-weight: 400;
+    text-align: center;
+}
+
+.h2-datos {
+    font-weight: 400;
+}
+
+.p-datos {
+    color: #727272;
+}
+
+/* Acerca de */
+.h1-acerca-de {
+    font-weight: 400;
+    text-align: center;
+}
+
+.boton-enviar {
+    background-color: rgb(76, 0, 255);
+    color: white;
+    border-style: hidden;
+}
+
+footer p {
+    color: #727272;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: px;
+}
+
+
+
+
