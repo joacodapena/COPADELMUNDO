@@ -53,8 +53,7 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 24px;
-    margin-right: 20px;
+    gap: 18px;
 }
 
 .nav-li {
@@ -64,6 +63,20 @@ h2 {
 .nav-link {
     text-decoration: none;
     color: rgb(1, 1, 66);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(1000%);
+}
+
+.navbar-nav .nav-item .nav-link {
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: rgb(1, 1, 66); /* Azul oscuro */
+    color: white; /* Texto en blanco */
 }
 
 /* INDEX - Contenido principal */
@@ -312,13 +325,35 @@ table {
 
 .h2-estadisticas {
     font-weight: 400;
+    margin-left: 12px;
+    padding-top: 24px;
 }
 
-ol {
+ol li {
+    font-size: 22px;
+    padding: 0 24px;
     color: #727272;
 }
 
+.carousel {
+    width: 80%;
+    padding: 20px;
+}
 
+.caption {
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.caption p {
+    color: white;
+}
+
+.caption:hover{
+    background-color: rgb(1, 1, 66);
+    color: white;
+    padding: 5px 15px;
+}
 
 .goles2010 {
     text-decoration: none;
