@@ -63,32 +63,52 @@
      
 
     <!-- Formulario de envío-->
-    <form action="/sumbit" method="post">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
+  <section>
+    <form class="formulario">
+      <div class="mb-3 correo">
+        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">No compartiremos tu dirección con nadie más</div>
+      </div>
 
-        <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido">
+      <div class="mb-3 contraseña">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" id="mensaje"></textarea>
+      <div class="mb-3 mensaje">
+        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
 
-        <label for="genero">Género</label>
-        <input type="radio" name="" id="">
-        <label for="hombre">Hombre</label>
+    <div class="sel-region">
+     <label class="label-region" for="seleccionar-region">Región</label>
+     <select id="seleccionar-region" class="form-select form-control" aria-label="Default select example">
+        <option selected>(Seleccionar)</option>
+        <option value="1">Argentina</option>
+        <option value="2">Bolivia</option>
+        <option value="3">Brasil</option>
+        <option value="4">Colombia</option>
+        <option value="5">Chile</option>
+        <option value="6">Ecuador</option>
+        <option value="7">Paraguay</option>
+        <option value="8">Perú</option>
+        <option value="9">Uruguay</option>
+        <option value="10">Venezuela</option>
+        <option value="11">Otro</option>
+      </select>
+    </div>
 
-        <input type="radio" name="" id="">
-        <label for="mujer">Mujer</label>
+      <div class="mb-3 form-check checkbox">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Quiero recibir información acerca de esta página</label>
+      </div>
 
-        <input type="radio" name="" id="">
-        <label for="indefinido">Prefiero no decirlo</label>
-
-        <label for="subscribe">Quiero recibir notificaciones acerca de esta página</label>
-        <input type="checkbox" name="subscribe" id="subscribe">
-
-        <input class="boton-enviar" type="submit" value="Enviar">
-     </form>
-     <hr>
+      <div class="sumbit-item">
+      <button type="submit" class="btn btn-primary boton-enviar">Enviar</button>
+    </div>
+    </form>
+    </section>
 
 <!-- Footer -->
 <footer>
