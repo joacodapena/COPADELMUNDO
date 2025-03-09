@@ -4,6 +4,20 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Fuente de texto del body y color de fondo */
 body {
     font-family: "Overpass", serif;
@@ -16,18 +30,20 @@ body p {
     font-size: large;
 }
 
-h1 {
-    font-weight: 400;
-    text-align: center;
-    padding: 36px;
+h1, h2, h3, .caption p, .p-datos {
     color: rgb(1, 1, 66);
+    font-weight: 400; 
+    text-align: center;
+}
+
+h1 {
+    padding: 36px;
 }
 
 h2 {
-    font-weight: 400;
     text-align: start;
     margin-bottom: 5px;
-    color: rgb(1, 1, 66);
+    font-size: 24px;
 }
 
 /* Ajustes de fuente de la barra de navegación */
@@ -65,6 +81,11 @@ h2 {
     color: rgb(1, 1, 66);
 }
 
+.navbar-toggler {
+    background-color: rgb(1, 1, 66);
+    border-color: white;
+}
+
 .navbar-toggler-icon {
     filter: invert(1) brightness(1000%);
 }
@@ -86,10 +107,6 @@ h2 {
     text-align: center;
 }
 
-.h2-index {
-    text-align: start;
-}
-
 hr {
     width: 60%;
     margin: 20px auto;
@@ -98,30 +115,29 @@ hr {
 
 .p2-index {
     margin-bottom: 12px;
+    text-align: start;
 }
 
 .main1 {
     grid-area: main1;
-    margin-left: 16px
-
+    padding-left: 18px;
 }
 
 .main2 {
     grid-area: main2;
-    margin-left: 16px;
+    padding-left: 18px;
 }
 
 .video-container {
-    margin: 32px 32px;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    padding: 24px 0 24px 24px;
     grid-area: video-container
 }
 
 .video {
-    width: 100%;
-    height: 100%;
+    height: 450px;
     border-radius: 12px 12px;
 }
 
@@ -138,139 +154,8 @@ hr {
     margin-top: 24px;
 }
 
-/* MEDIA QUERIES INDEX */
-@media (max-width: 500px) {
-    .main-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 150px);
-        grid-template-areas: 
-        "main1"
-        "video-container"
-        "main2";
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 60px;
-    }
-    .p-index{
-        margin: 12px;
-    }
-    .main-content p {
-        font-size: 16px;
-        margin: 0 32px;
-    }
-    .main-content h2 {
-        font-size: 20px;
-    }
-    .video {
-        width: 350px;
-        height: 175px;
-        padding-bottom: 24px;
-    }
-    h2 {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-    .h2-index {
-        text-align: center;
-    }
-
-    .main-content div {
-        margin: 0;
-    }
-
-    .footer {
-        font-size: 12px;
-        margin: 12px;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 700px) {
-    .main-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 150px);
-        grid-template-areas: 
-        "main1"
-        "video-container"
-        "main2";
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 60px;
-    }
-    .main-content p {
-        font-size: 16px;
-        margin: 0 32px;
-    }
-    .main-content h2 {
-        font-size: 20px;
-    }
-    .video {
-        width: 500px;
-        height: 250px;
-        padding-bottom: 24px;
-    }
-    h2 {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-    .h2-index {
-        text-align: center;
-    }
-
-    .main-content div {
-        margin: 0;
-    }
-}
-
-@media (min-width: 700px) and (max-width: 820px) {
-    .main-content p {
-        font-size: 11px;
-    }
-    .main-content h2 {
-        font-size: 13px;
-    }
-    .main-content {
-        grid-template-rows: repeat(2, 160px);
-    }
-    .video {
-        width: 500px;
-        height: 250px;
-    }
-}
-
-@media (min-width: 820px) and (max-width: 960px) {
-    .main-content p {
-        font-size: 12px;
-    }
-    .main-content h2 {
-        font-size: 14px;
-    }
-    .main-content {
-        grid-template-rows: repeat(2, 170px);
-    }
-    .video {
-        width: 600px;
-        height: 300px;
-    }
-}
-
-@media (min-width: 960px) and (max-width: 1165px) {
-    .main-content p {
-        font-size: 14px;
-    }
-    .main-content h2 {
-        font-size: 18px;
-    }
-    .main-content {
-        grid-template-rows: repeat(2, 190px);
-    }
-    .video {
-        width: 700;
-        height: 350px;
-    }
+.main-content p {
+    font-size: 16px;
 }
 
 /* HISTORIAL */
@@ -280,12 +165,16 @@ hr {
 
 .p-historial {
     text-align: center;
+    margin: 0 24px;
     padding-bottom: 36px;
 }
 
 .h2-historial {
-    font-weight: 400;
     padding-bottom: 12px;
+}
+
+.p2-historial {
+    text-align: start;
 }
 
 .main1-historial {
@@ -299,6 +188,9 @@ hr {
 }
 
 .uruguay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     grid-area: uruguay;
 }
 
@@ -320,8 +212,6 @@ hr {
 }
 
 h3 {
-    color: rgb(1, 1, 66);
-    text-align: center;
     padding-top: 32px;
 }
 
@@ -348,7 +238,6 @@ table {
 .titulo-tabla {
     text-align: center;
     font-size: 22px;
-    font-weight: 400;
     color: rgb(1, 1, 66);
     padding-bottom: 8px;
 }
@@ -358,313 +247,11 @@ table {
     justify-content: space-evenly;
     gap: 12px;
     padding-top: 36px;
-}
-
-@media (min-width: 935px) and (max-width: 1175px) {
-    .main-content-historial p {
-        font-size: 16px;
-    }
-    .main-content-historial h2 {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: 780px) and (max-width: 935px){
-    .h1-historial {
-        font-size: 32px;
-    }
-    .p-historial {
-        font-size: 16px;
-        margin: 0 16px;
-    }
-    .main-content-historial h2 {
-        font-size: 22px;
-    }
-    .main-content-historial p {
-        font-size: 14px;
-    }
-    .uru-img {
-        height: 90%;
-    }
-    .table1 th:nth-child(1), .table1 td:nth-child(1) {
-        width: 175px;
-    }
-    .table1 th:nth-child(2), .table1 td:nth-child(2) {
-        width: 150px;
-    }
-    .tabla2 {
-        width: 25%;
-    }
-}
-
-@media (min-width: 580px) and (max-width: 780px){
-    .main-content-historial {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 200px);
-        justify-content: center;
-        grid-template-areas: 
-        "uruguay main1-hist main1-hist"
-        "uruguay main2-hist main2-hist";
-        padding: 24px;
-    }
-    .h1-historial {
-        font-size: 30px;
-    }
-    .p-historial {
-        font-size: 14px;
-        margin: 0 24px;
-    }
-    .main-content-historial h2 {
-        font-size: 18px;
-        text-align: start;
-    }
-    .main-content-historial p {
-        font-size: 11px;
-    }
-    .tabla1 {
-        font-size: 14px;
-    }
-    .table1 th:nth-child(1), .table1 td:nth-child(1) {
-        width: 150px;
-    }
-    .table1 th:nth-child(2), .table1 td:nth-child(2) {
-        width: 125px;
-    }
-    .tabla2 {
-        width: 25%;
-        font-size: 14px;
-    }
-    h3 {
-        font-size: 22px;
-    }
-    .titulo-tabla {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 490px) and (max-width: 580px) {
-    .main-content-historial {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 175px);
-        justify-content: center;
-        grid-template-areas: 
-        "uruguay main1-hist main1-hist"
-        "uruguay main2-hist main2-hist";
-        padding: 12px;
-    }
-    .h1-historial {
-        font-size: 26px;
-    }
-    .p-historial {
-        font-size: 14px;
-        margin: 0 24px;
-    }
-    .main-content-historial h2 {
-        font-size: 16px;
-        text-align: start;
-        padding: 0;
-    }
-    .main-content-historial p {
-        font-size: 10px;
-    }
-    .main1-historial {
-        padding: 10px;
-    }
-    .main2-historial {
-        padding: 20px 0 0 10px;
-    }
-    .table-container {
-        padding-top: 12px;
-    }
-    .tabla1 {
-        font-size: 14px;
-    }
-    .table1 th:nth-child(1), .table1 td:nth-child(1) {
-        width: 125px;
-    }
-    .table1 th:nth-child(2), .table1 td:nth-child(2) {
-        width: 100px;
-    }
-    .tabla2 {
-        width: 33%;
-        font-size: 14px;
-    }
-    h3 {
-        font-size: 22px;
-    }
-    .titulo-tabla {
-        font-size: 16px;
-    }
-    .footer {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 390px) and (max-width: 490px) {
-    .main-content-historial {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 200px 300px 200px;
-        justify-content: center;
-        grid-template-areas: 
-        "main1-hist main1-hist main1-hist"
-        "uruguay uruguay uruguay"
-        "main2-hist main2-hist main2-hist";
-        padding: 24px 12px;
-    }
-    .h1-historial {
-        font-size: 26px;
-    }
-    .p-historial {
-        font-size: 14px;
-        margin: 0 24px;
-    }
-    .main-content-historial h2 {
-        font-size: 14px;
-        text-align: start;
-        padding: 0;
-    }
-    .main-content-historial p {
-        font-size: 10px;
-    }
-    .main1-historial {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: start;
-        padding: 20px;
-    }
-    .main2-historial {
-        padding: 18px;
-    }
-    .uruguay {
-        display: flex;
-        justify-content: center;
-    }
-    .uru-img {
-        width: 50%;
-    }
-    .table-container {
-        display: flex;
-        justify-content: center;
-        padding-top: 12px;
-        margin-right: 12px;
-    }
-    .tabla1 {
-        font-size: 10px;
-    }
-    .table1 th:nth-child(1), .table1 td:nth-child(1) {
-        width: 100px;
-    }
-    .table1 th:nth-child(2), .table1 td:nth-child(2) {
-        width: 75px;
-    }
-    .tabla2 {
-        width: 25%;
-        font-size: 10px;
-    }
-    h3 {
-        padding: 0;
-        font-size: 18px;
-    }
-    .titulo-tabla {
-        text-align: -webkit-center;
-        font-size: 12px;
-    }
-    .footer {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 390px) {
-    .main-content-historial {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 200px 300px 200px;
-        justify-content: center;
-        grid-template-areas: 
-        "main1-hist main1-hist main1-hist"
-        "uruguay uruguay uruguay"
-        "main2-hist main2-hist main2-hist";
-        padding: 24px 12px;
-    }
-    .h1-historial {
-        font-size: 26px;
-    }
-    .p-historial {
-        font-size: 14px;
-        margin: 0 24px;
-    }
-    .main-content-historial h2 {
-        font-size: 14px;
-        text-align: start;
-        padding: 0;
-    }
-    .main-content-historial p {
-        font-size: 10px;
-    }
-    .main1-historial {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: start;
-        padding: 20px;
-    }
-    .main2-historial {
-        padding: 18px;
-    }
-    .uruguay {
-        display: flex;
-        justify-content: center;
-    }
-    .uru-img {
-        width: 50%;
-    }
-    .table-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 12px;
-        margin: 0 24px;
-    }
-    .tabla1 {
-        font-size: 10px;
-    }
-    .table1 th:nth-child(1), .table1 td:nth-child(1) {
-        width: 100px;
-    }
-    .table1 th:nth-child(2), .table1 td:nth-child(2) {
-        width: 75px;
-    }
-    .tabla2 {
-        width: 50%;
-        font-size: 10px;
-    }
-    h3 {
-        padding: 0;
-        font-size: 18px;
-    }
-    .titulo-tabla {
-        text-align: -webkit-center;
-        font-size: 12px;
-    }
-    .footer {
-        font-size: 12px;
-    }
+    margin: 12px;
 }
 
 /* Estadisticas */
-.h1-estadisticas {
-    font-weight: 400;
-    text-align: center;
-}
-
 .h2-estadisticas {
-    font-weight: 400;
     margin-left: 12px;
     padding-top: 24px;
 }
@@ -678,6 +265,10 @@ ol li {
 .carousel {
     width: 80%;
     padding: 20px;
+}
+
+.carousel-img {
+    border-radius: 20px;
 }
 
 .caption {
@@ -701,25 +292,11 @@ ol li {
 }
 
 /* Pestaña Datos */
-.h1-datos {
-    font-weight: 400;
-    text-align: center;
-}
-
-.h2-datos {
-    font-weight: 400;
-}
-
 .p-datos {
     color: #727272;
 }
 
 /* Acerca de */
-.h1-acerca-de {
-    font-weight: 400;
-    text-align: center;
-}
-
 .formulario {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -795,9 +372,240 @@ footer p {
     font-size: 14px;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: px;
 }
 
+/* Media queries generales */
+/* Navbar */
+@media (max-width: 500px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .nav-link {
+        display: block;
+        padding: 10px;
+    }
 
+    /* Index */
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 200px 150px;
+        grid-template-areas: 
+        "main1"
+        "video-container"
+        "main2";
+        text-align: center;
+        gap: 60px;
+    }
+    .main1, .main2 {
+        padding: 0;
+    }
+    .main-content p, .main-content-historial p {
+        font-size: 14px;
+        margin: 0 32px;
+        text-align: center;
+    }
+    .main-content h2, .main-content-historial h2 {
+        font-size: 18px;
+    }
+    .main-content div {
+        margin: 0;
+    }
+    .h2-index {
+        text-align: center;
+    }
+    .video-container {
+        margin: 16px;
+        padding: 0;
+    }
+    .video {
+        height: 175px;
+    }
+    
+    /* Historial */
+    .main-content-historial {
+        grid-template-rows: 400px 400px 300px;
+        grid-template-areas: 
+        "main1-hist main1-hist main1-hist"
+        "uruguay uruguay uruguay"
+        "main2-hist main2-hist main2-hist";
+        padding: 24px 12px;
+    }
+    .main-content-historial p {
+        margin: 0;
+        text-align: start;
+    }
+    .uruguay {
+        align-items: center;
+    }
+    .uru-img {
+        width: 66%;
+    }
+    .table-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer {
+        font-size: 10px;
+    }
+}
 
+/* Media queries para dispositivos pequeños */
+@media (min-width: 500px) and (max-width: 700px) {
+    /* Index */
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 175px 300px 175px;
+        grid-template-areas: 
+        "main1"
+        "video-container"
+        "main2";
+        gap: 40px;
+    }
+    .main1, .main2 {
+        padding: 0;
+    }
+    .main-content p, .main-content-historial p {
+        margin: 0 32px;
+        text-align: center;
+    }
+    .main-content h2, .main-content-historial h2 {
+        font-size: 20px;
+    }
+    .main-content div {
+        margin: 0;
+        padding: 0;
+    }
+    .h2-index {
+        text-align: center;
+    }
+    .video-container {
+        margin: 16px;
+    }
+    .video {
+        width: 500px;
+        height: 250px;
+    }
+
+    /* Historial */
+    .main-content-historial {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 12px;
+    }
+    .p-historial {
+        font-size: 14px;
+        margin: 0 24px;
+    }
+    .main-content-historial h2 {
+        font-size: 16px;
+        text-align: start;
+    }
+    .main-content-historial p {
+        text-align: start;
+        font-size: 10px;
+        margin: 0;
+    }
+    .uru-img {
+        height: 93%;
+    }
+    .table1 th:nth-child(1), .table1 td:nth-child(1) {
+        width: 150px;
+    }
+    .table1 th:nth-child(2), .table1 td:nth-child(2) {
+        width: 125px;
+    }
+    .footer {
+        font-size: 10px;
+    }
+}
+
+/* Media queries para dispositivos medianos */
+@media (min-width: 701px) and (max-width: 1000px) {
+    /* Index */
+    .main-content p {
+        font-size: 10px;
+    }
+    .main-content h2 {
+        font-size: 12px;
+    }
+    .main-content {
+        grid-template-rows: repeat(2, 140px);
+        margin-right: 12px;
+    }
+    .video {
+        height: 250px;
+    }
+
+    /* Historial */
+    .main-content-historial {
+        padding: 12px;
+    }
+    .p-historial {
+        font-size: 18px;
+    }
+    .main-content-historial h2 {
+        font-size: 20px;
+        text-align: start;
+    }
+    .main-content-historial p {
+        text-align: start;
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .table1 th:nth-child(1), .table1 td:nth-child(1) {
+        width: 150px;
+    }
+    .table1 th:nth-child(2), .table1 td:nth-child(2) {
+        width: 125px;
+    }
+    .footer {
+        font-size: 10px;
+    }
+}
+
+/* Media queries para dispositivos grandes */
+@media (min-width: 1000px) and (max-width: 1260px) {
+    /* Index */
+    .main-content p {
+        font-size: 12px;
+    }
+    .main-content h2 {
+        font-size: 18px;
+    }
+    .video-container {
+        margin: 16px;
+    }
+    .video {
+        height: 350px;
+    }
+    .main-content {
+        grid-template-rows: repeat(2, 190px);
+    }
+
+    /* Historial */
+    .main-content-historial {
+        padding: 12px;
+    }
+    .main-content-historial p {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .table1 th:nth-child(1), .table1 td:nth-child(1) {
+        width: 150px;
+    }
+    .table1 th:nth-child(2), .table1 td:nth-child(2) {
+        width: 125px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+}
 
