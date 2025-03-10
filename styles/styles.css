@@ -25,12 +25,7 @@ body {
 }
 
 /* Color de letra de los parrafos del body */
-body p {
-    color: #727272;
-    font-size: large;
-}
-
-h1, h2, h3, .caption p, .p-datos {
+h1, h2, h3, .caption p {
     color: rgb(1, 1, 66);
     font-weight: 400; 
     text-align: center;
@@ -44,6 +39,11 @@ h2 {
     text-align: start;
     margin-bottom: 5px;
     font-size: 24px;
+}
+
+body p {
+    color: #727272;
+    font-size: large;
 }
 
 /* Ajustes de fuente de la barra de navegación */
@@ -256,9 +256,18 @@ table {
     padding-top: 24px;
 }
 
+.main-estadisticas ol {
+    padding: 2.5rem;
+    margin-left: 16px;
+}
+
+.p-est {
+    font-size: 22px;
+}
+
 ol li {
     font-size: 22px;
-    padding: 0 24px;
+    padding: 0 12px;
     color: #727272;
 }
 
@@ -291,9 +300,8 @@ ol li {
     color: rgb(1, 1, 66);
 }
 
-/* Pestaña Datos */
-.p-datos {
-    color: #727272;
+.cards-datos {
+    margin: 24px;
 }
 
 /* Acerca de */
