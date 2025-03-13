@@ -54,6 +54,7 @@ body p {
     margin-right: 10px;
     display: flex;
     flex-direction: row;
+    border-radius: 12px;
 }
 
 .navbar {
@@ -250,6 +251,14 @@ table {
     margin: 12px;
 }
 
+.icon-m {
+    width: 10%;
+}
+
+.icon {
+    width: 13%;
+}
+
 /* Estadisticas */
 .h2-estadisticas {
     margin-left: 12px;
@@ -263,6 +272,7 @@ table {
 
 .p-est {
     font-size: 22px;
+    margin-top: 12px;
 }
 
 ol li {
@@ -295,13 +305,40 @@ ol li {
     padding: 5px 15px;
 }
 
-.goles2010 {
-    text-decoration: none;
-    color: rgb(1, 1, 66);
+.cards-est {
+    margin: 24px;
 }
 
-.cards-datos {
-    margin: 24px;
+/* Datos */
+.main-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 36px;
+}
+
+.card-datos {
+    width: 80%;
+}
+
+.goles-card {
+    width: 18rem;
+}
+
+.h2-datos {
+    text-align: center;
+    margin: 12px;
+}
+
+.video-datos {
+    border-radius: 8px;
+}
+
+.mejores-goles {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 /* Acerca de */
@@ -459,7 +496,60 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-    .footer {
+
+    /* Estadisticas */
+    .main-estadisticas ol {
+        padding: 1rem;
+        margin-left: 8px;
+    }
+    .carousel {
+        width: 100%;
+        padding: 8px;
+    }
+    .li-gol, .p-est {
+        font-size: 12px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+    .cards-est li{
+        font-size: 12px;
+    }
+    
+    /* Datos */
+    .main-datos {
+        margin: 18px;
+    }
+    .card-datos {
+        width: 100%;
+    }
+    .card-body p {
+        font-size: 12px;
+    }
+    .goles-card p {
+        font-size: 14px;
+    }
+
+    /* Acerca de */
+    .formulario {
+        padding: 0;
+    }
+    .form-label {
+        font-size: 12px;
+    }
+    .label-region {
+        padding: 0;
+    }
+    #emailHelp {
+        font-size: 8px;
+    }
+    #seleccionar-region {
+        font-size: 10px;
+    }
+    .form-check-label {
+        font-size: 12px;
+    }
+    footer p {
         font-size: 10px;
     }
 }
@@ -528,7 +618,22 @@ footer p {
     .table1 th:nth-child(2), .table1 td:nth-child(2) {
         width: 125px;
     }
-    .footer {
+
+    /* Estadisticas */
+    .carousel {
+        width: 100%;
+        padding: 8px;
+    }
+    .li-gol, .p-est {
+        font-size: 12px;
+    }
+
+    /* Datos */
+    .card-datos .card-body p {
+        font-size: 14px;
+    }
+
+    footer p {
         font-size: 10px;
     }
 }
@@ -573,7 +678,21 @@ footer p {
     .table1 th:nth-child(2), .table1 td:nth-child(2) {
         width: 125px;
     }
-    .footer {
+
+    /* Estadisticas */
+    .carousel {
+        width: 100%;
+    }
+    .caption p, .h5-est{
+        font-size: 14px;
+    }
+    .li-gol, .p-est {
+        font-size: 16px;
+    }
+    .cards-est li {
+        font-size: 12px;
+    }
+    footer p {
         font-size: 10px;
     }
 }
@@ -612,7 +731,7 @@ footer p {
     .table1 th:nth-child(2), .table1 td:nth-child(2) {
         width: 125px;
     }
-    .footer {
+    footer p {
         font-size: 12px;
     }
 }
