@@ -1,0 +1,61 @@
+// Acerca De
+.formulario {
+    @include grid (repeat(2, 1fr), 100px 150px 50px 50px, center, start, "correo contraseña"
+    "mensaje region"
+    "check check"
+    "boton-enviar boton-enviar");
+    padding: 24px;
+    margin: 24px;
+    gap: 88px;
+
+    .form-control {
+        border: var(--bs-border-width) solid map-get($colors , azul-frio );
+    }
+
+    .form-control:focus {
+        outline: 0;
+        box-shadow: 0 0 0 .25rem map-get($colors , azul-base );
+        border: map-get($colors , gris-fondo );
+    }
+
+    .correo {
+        grid-area: correo;
+    }
+
+    .contraseña {
+        grid-area: contraseña;
+    }
+
+    .mensaje {
+        grid-area: mensaje;
+    }
+
+    .mensaje textarea {
+        min-height: 100px;
+        max-height: 130px;
+        resize: vertical;
+        display: block;
+    }
+
+    .sel-region {
+        grid-area: region;
+    }
+
+    .checkbox {
+        grid-area: check;
+    }
+
+    .boton-enviar {
+        background-color: map-get($colors , azul-calido );
+        padding: 10px 20px;
+        color: map-get($colors , blanco );
+        border-style: hidden;
+    }
+    
+    .sumbit-item {
+        @include flex (row, center);
+        align-items: center;
+        grid-area: boton-enviar;
+    }
+
+}

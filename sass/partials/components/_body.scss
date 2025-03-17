@@ -1,0 +1,30 @@
+body {
+    font-family: $fuente;
+    background-color: map-get($colors , gris-fondo );
+    p {
+        color: map-get($colors , gris-body );
+    }
+}
+
+h1, h2, h3, .caption p {
+    color: map-get($colors , azul-base );
+    font-weight: $grosor-fuente;
+    text-align: center;
+}
+
+h1 {
+    padding: 36px;
+}
+
+h2 {
+    text-align: start;
+    margin-bottom: 5px;
+    font-size: map-get($font-sizes , xxl );
+}
+
+hr {
+    width: 60%;
+    margin: 20px auto;
+    color: map-get($colors , gris-body );
+    border: $borde-hr;
+}

@@ -1,31 +1,17 @@
 /* Reset de CSS - lo dejo como comentario porque no me convencio como queda */
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+} */
 
 /* Fuente de texto del body y color de fondo */
-body {
+/* body {
     font-family: "Overpass", serif;
     background-color: #f3f3f3;
-}
+} */
 
 /* Color de letra de los parrafos del body */
-h1, h2, h3, .caption p {
+/* h1, h2, h3, .caption p {
     color: rgb(1, 1, 66);
     font-weight: 400; 
     text-align: center;
@@ -44,10 +30,10 @@ h2 {
 body p {
     color: #727272;
     font-size: large;
-}
+} */
 
 /* Ajustes de fuente de la barra de navegación */
-.logo {
+/* .logo {
     width: 150px;
     height: 75px;
     margin-left: 10px;
@@ -56,6 +42,9 @@ body p {
     flex-direction: row;
     border-radius: 12px;
 }
+
+.bg-body-tertiary {
+    background-color: rgb(216, 228, 240) !important;}
 
 .navbar {
     display: flex;
@@ -71,13 +60,13 @@ body p {
     align-items: center;
     flex-wrap: wrap;
     gap: 18px;
-}
+} */
 
-.nav-li {
+/* .nav-li {
     list-style: none;
-}
+} */
 
-.nav-link {
+/* .navbar ul .nav-link {
     text-decoration: none;
     color: rgb(1, 1, 66);
 }
@@ -98,11 +87,11 @@ body p {
 
 .navbar-nav .nav-item .nav-link:hover {
     background-color: rgb(1, 1, 66); /* Azul oscuro */
-    color: white; /* Texto en blanco */
-}
+    /* color: white; Texto en blanco
+} */ 
 
 /* INDEX - Contenido principal */
-.p-index {
+/* .p-index {
     padding-bottom: 12px;
     margin: 0 60px;
     text-align: center;
@@ -111,6 +100,7 @@ body p {
 hr {
     width: 60%;
     margin: 20px auto;
+    color: #727272;
     border: 1px solid #727272;
 }
 
@@ -157,10 +147,10 @@ hr {
 
 .main-content p {
     font-size: 16px;
-}
+} */
 
 /* HISTORIAL */
-.h1-historial {
+/* .h1-historial {
     padding-bottom: 12px;
 }
 
@@ -206,6 +196,7 @@ hr {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 250px);
     justify-content: center;
+    align-items: stretch;
     grid-template-areas: 
     "uruguay main1-hist main1-hist"
     "uruguay main2-hist main2-hist";
@@ -238,13 +229,14 @@ table {
 
 .titulo-tabla {
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     color: rgb(1, 1, 66);
     padding-bottom: 8px;
 }
 
 .table-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     gap: 12px;
     padding-top: 36px;
@@ -257,10 +249,10 @@ table {
 
 .icon {
     width: 13%;
-}
+} */
 
 /* Estadisticas */
-.h2-estadisticas {
+/* .h2-estadisticas {
     margin-left: 12px;
     padding-top: 24px;
 }
@@ -271,12 +263,12 @@ table {
 }
 
 .p-est {
-    font-size: 22px;
+    font-size: 24px;
     margin-top: 12px;
 }
 
 ol li {
-    font-size: 22px;
+    font-size: 24px;
     padding: 0 12px;
     color: #727272;
 }
@@ -307,10 +299,10 @@ ol li {
 
 .cards-est {
     margin: 24px;
-}
+} */
 
 /* Datos */
-.main-datos {
+/* .main-datos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -337,16 +329,18 @@ ol li {
 .mejores-goles {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
-}
+} */
 
 /* Acerca de */
-.formulario {
+/* .formulario {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 100px 150px 50px 50px;
     justify-content: center;
+    align-items: start;
     grid-template-areas: 
     "correo contraseña"
     "mensaje region"
@@ -354,7 +348,7 @@ ol li {
     "boton-enviar boton-enviar";
     padding: 24px;
     margin: 24px;
-    gap: 24px;
+    gap: 88px;
 }
 
 .form-control {
@@ -386,10 +380,6 @@ ol li {
     display: block;
 }
 
-.label-region {
-    padding-bottom: 8px;
-}
-
 .sel-region {
     grid-area: region;
 }
@@ -407,6 +397,7 @@ ol li {
 
 .sumbit-item {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     grid-area: boton-enviar;
@@ -417,14 +408,15 @@ footer p {
     font-size: 14px;
     text-align: center;
     padding-top: 50px;
-}
+} */
 
 /* Media queries generales */
 /* Navbar */
-@media (max-width: 500px) {
-    .navbar-collapse {
+/* @media (max-width: 500px) { */
+    /* .navbar-collapse {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     .navbar-nav .nav-item {
@@ -435,10 +427,10 @@ footer p {
     .nav-link {
         display: block;
         padding: 10px;
-    }
+    } */
 
     /* Index */
-    .main-content {
+    /* .main-content {
         grid-template-columns: 1fr;
         grid-template-rows: 150px 200px 150px;
         grid-template-areas: 
@@ -471,10 +463,10 @@ footer p {
     }
     .video {
         height: 175px;
-    }
+    } */
     
     /* Historial */
-    .main-content-historial {
+    /* .main-content-historial {
         grid-template-rows: 400px 400px 300px;
         grid-template-areas: 
         "main1-hist main1-hist main1-hist"
@@ -495,10 +487,10 @@ footer p {
     .table-container {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 
     /* Estadisticas */
-    .main-estadisticas ol {
+    /* .main-estadisticas ol {
         padding: 1rem;
         margin-left: 8px;
     }
@@ -514,10 +506,10 @@ footer p {
     }
     .cards-est li{
         font-size: 12px;
-    }
+    } */
     
     /* Datos */
-    .main-datos {
+    /* .main-datos {
         margin: 18px;
     }
     .card-datos {
@@ -528,10 +520,10 @@ footer p {
     }
     .goles-card p {
         font-size: 14px;
-    }
+    } */
 
     /* Acerca de */
-    .formulario {
+    /* .formulario {
         padding: 0;
     }
     .form-label {
@@ -552,12 +544,12 @@ footer p {
     footer p {
         font-size: 10px;
     }
-}
+} */
 
 /* Media queries para dispositivos pequeños */
-@media (min-width: 500px) and (max-width: 700px) {
+/* @media (min-width: 500px) and (max-width: 700px) { */
     /* Index */
-    .main-content {
+    /* .main-content {
         grid-template-columns: 1fr;
         grid-template-rows: 175px 300px 175px;
         grid-template-areas: 
@@ -589,10 +581,10 @@ footer p {
     .video {
         width: 500px;
         height: 250px;
-    }
+    } */
 
     /* Historial */
-    .main-content-historial {
+    /* .main-content-historial {
         grid-template-columns: 1.5fr 1fr 1fr;
         padding: 12px;
     }
@@ -617,31 +609,31 @@ footer p {
     }
     .table1 th:nth-child(2), .table1 td:nth-child(2) {
         width: 125px;
-    }
+    } */
 
     /* Estadisticas */
-    .carousel {
+    /* .carousel {
         width: 100%;
         padding: 8px;
     }
     .li-gol, .p-est {
         font-size: 12px;
-    }
+    } */
 
     /* Datos */
-    .card-datos .card-body p {
+    /* .card-datos .card-body p {
         font-size: 14px;
     }
 
     footer p {
         font-size: 10px;
     }
-}
+} */
 
 /* Media queries para dispositivos medianos */
-@media (min-width: 701px) and (max-width: 1000px) {
+/* @media (min-width: 700px) and (max-width: 1000px) { */
     /* Index */
-    .main-content p {
+    /* .main-content p {
         font-size: 10px;
     }
     .main-content h2 {
@@ -653,10 +645,10 @@ footer p {
     }
     .video {
         height: 250px;
-    }
+    } */
 
     /* Historial */
-    .main-content-historial {
+    /* .main-content-historial {
         padding: 12px;
     }
     .p-historial {
@@ -677,10 +669,10 @@ footer p {
     }
     .table1 th:nth-child(2), .table1 td:nth-child(2) {
         width: 125px;
-    }
+    } */
 
     /* Estadisticas */
-    .carousel {
+    /* .carousel {
         width: 100%;
     }
     .caption p, .h5-est{
@@ -694,13 +686,13 @@ footer p {
     }
     footer p {
         font-size: 10px;
-    }
-}
+    } */
+/* } */
 
 /* Media queries para dispositivos grandes */
-@media (min-width: 1000px) and (max-width: 1260px) {
+/* @media (min-width: 1000px) and (max-width: 1260px) { */
     /* Index */
-    .main-content p {
+    /* .main-content p {
         font-size: 12px;
     }
     .main-content h2 {
@@ -714,10 +706,10 @@ footer p {
     }
     .main-content {
         grid-template-rows: repeat(2, 190px);
-    }
+    } */
 
     /* Historial */
-    .main-content-historial {
+    /* .main-content-historial {
         padding: 12px;
     }
     .main-content-historial p {
@@ -734,5 +726,4 @@ footer p {
     footer p {
         font-size: 12px;
     }
-}
-
+} */

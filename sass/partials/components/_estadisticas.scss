@@ -1,0 +1,47 @@
+// Estadisticas
+.h2-estadisticas {
+    padding-top: 24px;
+}
+
+.main-estadisticas ol {
+    padding: 2.5rem;
+    margin-left: 16px;
+
+    li {
+        font-size: map-get($font-sizes, xxl );
+        padding: 0 12px;
+        color: map-get($colors , gris-body );
+    }
+}
+
+.p-est {
+    font-size: map-get($font-sizes , xxl );
+    margin-top: 12px;
+}
+
+.carousel {
+    width: 80%;
+    padding: 20px;
+
+    .carousel-img {
+        border-radius: $borde-carrusel;
+    }
+    .caption {
+        display: inline-block;
+        border-radius: $borde-caption;
+
+        p {
+            color: map-get($colors , blanco );
+            font-size: map-get($font-sizes , m );
+        }
+    }
+    .caption:hover {
+        background-color: map-get($colors , azul-base );
+        color: map-get($colors , blanco );
+        padding: 5px 15px;
+    }
+}
+
+.cards-est {
+    margin: 24px;
+}

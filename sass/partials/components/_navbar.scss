@@ -1,0 +1,54 @@
+// Navbar
+.logo {
+    display: flex;
+    flex-direction: row;
+    @include medidas (150px, 75px);
+    margin: 0 10px;
+    border-radius: $borde-curvo-base;
+}
+
+.navbar {
+    @include flex (row, space-between);
+    border-bottom: $borde-nav;
+
+    ul {
+        @include flex (row, center);
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+
+        .nav-link {
+            text-decoration: none;
+            color: map-get($colors , azul-base );
+            padding: 10px 15px;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                border-radius: 8px;
+                padding: 10px 15px;
+            }
+            .nav-link:hover {
+                background-color: map-get($colors , azul-base );
+                color: map-get($colors , blanco );
+            }
+        }
+    }
+
+    .navbar-toggler {
+        background-color: map-get($colors , azul-base );
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(1) brightness(1000%);
+    }
+}
+
+.bg-body-tertiary {
+    background-color: map-get($colors , azul-suave ) !important;
+}
+
+
+

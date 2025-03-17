@@ -1,0 +1,43 @@
+// Componetnes de pagina Index
+.p-index {
+    padding-bottom: 12px;
+    margin: 0 60px;
+    text-align: center;
+}
+
+.p2-index {
+    margin-bottom: 12px;
+    text-align: start;
+}
+
+.main1 {
+    grid-area: main1;
+    padding-left: 18px;
+}
+
+.main2 {
+    grid-area: main2;
+    padding-left: 18px;
+}
+
+.video {
+    height: 450px;
+    border-radius: $borde-curvo-base;
+}
+
+.video-container {
+    @include flex (row, center);
+    padding: 24px 0 24px 24px;
+    grid-area: video-container;
+}
+
+.main-content {
+    @include grid (repeat(3, 1fr), repeat(2, 250px), center, center, "main1 video-container video-container"
+    "main2 video-container video-container");
+    padding: 24px 0;
+    margin-top: 24px;
+
+    p {
+        font-size: map-get($font-sizes , m );
+    }
+}

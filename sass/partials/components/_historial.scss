@@ -1,0 +1,90 @@
+// Historial
+.h1-historial {
+    padding-bottom: 12px;
+}
+
+.h2-historial {
+    @extend .h1-historial
+}
+
+.p-historial {
+    text-align: center;
+    margin: 0 24px;
+    padding-bottom: 26px;
+}
+
+.p2-historial {
+    text-align: start;
+}
+
+.main1-historial {
+    padding: 20px 12px 0 18px;
+    grid-area: main1-hist;
+}
+
+.main2-historial {
+    padding: 32px 12px 0 18px;
+    grid-area: main2-hist;
+}
+
+.uruguay {
+    @include flex (row, center);
+    grid-area: uruguay;
+
+    .uru-img {
+        @include medidas (100%, 100%);
+        border-radius: $borde-curvo-base;
+    }
+}
+
+.main-content-historial {
+    @include grid (repeat(3, 1fr), repeat(2, 250px), center, stretch, "uruguay main1-hist main1-hist"
+    "uruguay main2-hist main2-hist");
+    padding: 24px;
+}
+
+h3 {
+    padding-top: 32px;
+}
+
+table {
+    text-align: left;
+}
+
+.table1 th:nth-child(1), .table1 td:nth-child(1) {
+    width: 250px;
+}
+
+.table1 th:nth-child(2), .table1 td:nth-child(2) {
+    width: 200px;
+}
+
+.table2 th:nth-child(1), .table2 td:nth-child(1) {
+    width: 150px;
+}
+
+.table2 th:nth-child(2), .table2 td:nth-child(2) {
+    width: 150px;
+}
+
+.titulo-tabla {
+    text-align: center;
+    font-size: map-get($font-sizes , xl ); 
+    color: map-get($colors , azul-base );
+    padding-bottom: 8px;
+}
+
+.table-container {
+    @include flex (row, space-evenly);
+    gap: 12px;
+    padding-top: 36px;
+    margin: 12px;
+}
+
+.icon-m {
+    width: 10%;
+}
+
+.icon {
+    width: 13%;
+}

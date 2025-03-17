@@ -1,0 +1,371 @@
+// Media Queries
+@include responsive (mobile) {
+    .navbar-collapse {
+        @include flex(column, center);
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px;
+    }
+
+    // Index
+    .main-content {
+        @include grid-mq (1fr, 150px 200px 150px, "main1"
+        "video-container"
+        "main2");
+        text-align: center;
+        gap: 60px;
+
+        p {
+            font-size: map-get($font-sizes , s );
+            margin: 0 32px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: map-get($font-sizes, xl );
+        }
+
+        div {
+            margin: 0;
+        }
+
+        .h2-index {
+            text-align: center;
+        }
+
+        .main1, .main2 {
+            padding: 0;
+        }
+        
+        .video-container {
+            margin: 16px;
+            padding: 0;
+
+            .video {
+                height: 175px;
+            }
+        }
+    }
+
+    // Historial
+    .main-content-historial {
+        grid-template-rows: 400px 400px 300px;
+        grid-template-areas: 
+        "main1-hist main1-hist main1-hist"
+        "uruguay uruguay uruguay"
+        "main2-hist main2-hist main2-hist";
+        padding: 24px 12px;
+
+        h2 {
+            font-size: map-get($font-sizes , l );
+        }
+
+        p {
+            margin: 0;
+            text-align: start;
+            font-size: map-get($font-sizes , s );
+        }
+    }
+
+    .uruguay {
+        align-items: center;
+
+        .uru-img {
+            width: 66%;
+        }
+    }
+
+    .table-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // Estadisticas
+    .main-estadisticas ol {
+        padding: 1rem;
+        margin-left: 8px;
+
+        .carousel {
+            width: 100%;
+            padding: 8px;
+        }
+
+        li {
+            font-size: map-get($font-sizes , xs );
+
+            .p-est {
+                font-size: map-get($font-sizes , xs );
+            }
+        }
+    }
+
+    h5 {
+        font-size: map-get($font-sizes , s );
+    }
+
+    .cards-est {
+        li {
+            font-size: map-get($font-sizes , xs );
+        }      
+    }
+
+    // Datos
+    .main-datos {
+        margin: 18px;
+
+        .card-datos {
+            width: 100%;
+
+            .card-body {
+
+                p {
+                    font-size: map-get($font-sizes , xs );
+                }
+            }
+        }
+    }
+
+    .goles-card {
+
+        p {
+            font-size: map-get($font-sizes, xs );
+        }
+    }
+
+    // Acerca De
+    .formulario, .label.region {
+        padding: 0;
+    }
+    .form-label {
+        font-size: map-get($font-sizes , xs );
+    }
+    #emailHelp {
+        font-size: map-get($font-sizes , formulario );
+    }
+    #seleccionar-region, footer p {
+        font-size: map-get($font-sizes , xxs );
+    }
+    .form-check-label {
+        font-size: map-get($font-sizes , xs );
+    }
+
+    // Footer
+    footer p {
+        font-size: map-get($font-sizes , xxs );
+    }
+}
+
+@include responsive (tablet) {
+    .main-content {
+        @include grid-mq (1fr, 175px 300px 175px, "main1"
+        "video-container"
+        "main2");
+        gap: 40px;
+
+        .main1, .main2 {
+            padding: 0;
+        }
+
+        p {
+            margin: 0 32px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: map-get($font-sizes , xl );
+        }
+
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        .h2-index {
+            text-align: center;
+        }
+
+        .video-container {
+            margin: 16px;
+
+            .video {
+                @include medidas (500px, 250px)
+            }
+        }
+    }
+
+    // Historial
+    .p-historial {
+        font-size: map-get($font-sizes , s );
+    }
+
+    .main-content-historial {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 12px;
+
+        h2 {
+            font-size: 16px;
+            text-align: start;
+        }
+
+        p {
+            text-align: start;
+            font-size: map-get($font-sizes, xxs );
+            margin: 0;
+        }
+
+        .uru-img {
+            height: 93%;
+        }
+    }
+
+    .table1 th:nth-child(1), .table1 td:nth-child(1) {
+        width: 150px;
+    }
+    .table1 th:nth-child(2), .table1 td:nth-child(2) {
+        width: 125px;
+    }
+
+    // Estadisticas
+    .carousel {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .main-estadisticas ol {
+        li {
+        font-size: map-get($font-sizes , xs );
+
+            .p-est {
+            font-size: map-get($font-sizes , xs );
+            }
+        }
+    }
+
+    // Datos 
+    .card-datos .card-body p {
+        font-size: map-get($font-sizes , s );
+    }
+
+    // Footer 
+    footer p {
+        font-size: map-get($font-sizes , xxs );
+    }
+
+}
+
+@include responsive (desktop) {
+    .main-content {
+        grid-template-rows: repeat(2, 140px);
+        margin-right: 12px;
+
+        h2 {
+            font-size: map-get($font-sizes , xs );
+        }
+        p {
+            font-size: map-get($font-sizes , xxs );
+        }
+        .video {
+            height: 250px;
+        }
+    }
+
+    // Historial
+    .p-historial {
+        font-size: 18px;
+    }
+
+    .main-content-historial {
+        padding: 12px;
+
+        h2 {
+            font-size: map-get($font-sizes , xl );
+        }
+        p {
+            font-size: map-get($font-sizes, xxs );
+            margin: 0;
+        }
+    }
+
+    .table1 th:nth-child(1), .table1 td:nth-child(1) {
+        width: 150px;
+    }
+    .table1 th:nth-child(2), .table1 td:nth-child(2) {
+        width: 125px;
+    }
+
+    // Estadisticas
+    .main-estadisticas ol {
+        li {
+        font-size: map-get($font-sizes , m );
+
+            .p-est {
+            font-size: map-get($font-sizes , m );
+            }
+        }
+    }
+    .carousel {
+        width: 100%;
+    }
+    .caption p, .h5-est{
+        font-size: map-get($font-sizes , s );
+    }
+    .cards-est li {
+        font-size: map-get($font-sizes , xs );
+    }
+    footer p {
+        font-size: map-get($font-sizes , xxs );
+    }
+}
+
+@include responsive (desktop-large) {
+    .main-content {
+        grid-template-rows: repeat(2, 190px);
+
+        h2 {
+            font-size: map-get($font-sizes , l );
+        }
+        
+        p {
+            font-size: map-get($font-sizes , xs );
+        }
+    }
+
+    .video-container {
+        margin: 16px;
+
+        .video {
+            height: 350px;
+        }
+    } 
+
+    // Historial
+    .main-content-historial {
+        padding: 12px;
+
+        p {
+            font-size: map-get($font-sizes , m );
+            margin: 0;
+        }
+    }
+
+    .table1 th:nth-child(1), .table1 td:nth-child(1) {
+        width: 150px;
+    }
+    .table1 th:nth-child(2), .table1 td:nth-child(2) {
+        width: 125px;
+    }
+
+    // Footer
+    footer p {
+        font-size: map-get($font-sizes , xs );
+    }
+}
