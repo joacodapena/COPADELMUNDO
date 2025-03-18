@@ -19,6 +19,12 @@
     height: $alto;
 }
 
+@mixin animacion ($nombre, $duracion, $iteracion) {
+  animation-name: $nombre;
+  animation-duration: $duracion;
+  animation-iteration-count: $iteracion;
+}
+
 // Mixin para media queries
 @mixin responsive ($breakpoint) {
     @if $breakpoint == mobile {

@@ -7,7 +7,10 @@ $colors: (
     azul-frio: rgb(155, 165, 255),
     azul-calido: rgb(76, 0, 255),
     azul-suave: rgb(216, 228, 240),
-);
+    radiante-azul: radial-gradient(closest-side, rgb(155, 165, 255), rgb(76, 0, 255), rgb(1, 1, 66)),
+    radiante-nav: linear-gradient(to bottom, #f3f3f3, rgb(216, 228, 240)),
+    radiante-link: linear-gradient(to top,  rgb(1, 1, 66), rgb(76, 0, 255)),
+    );
 
 $font-sizes: (
     formulario: 8px,

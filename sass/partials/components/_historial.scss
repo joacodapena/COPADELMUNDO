@@ -1,10 +1,6 @@
 // Historial
-.h1-historial {
-    padding-bottom: 12px;
-}
-
 .h2-historial {
-    @extend .h1-historial
+    padding-bottom: 12px;
 }
 
 .p-historial {
@@ -12,10 +8,6 @@
     margin: 0 24px;
     padding-bottom: 26px;
 }
-
-// .p2-historial {
-//     text-align: start;
-// }
 
 .main1-historial {
     padding: 20px 12px 0 18px;

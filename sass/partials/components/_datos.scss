@@ -14,4 +14,14 @@
             border-radius: $borde-curvo-s;
         }
     }
+
+    .card-datos:hover {
+        color: map-get($colors , blanco );
+        background-image: map-get($colors , radiante-azul );
+        @include animacion (hover-color, 1s, 1);
+
+        .card-text, .text-body-secondary {
+            color: map-get($colors , blanco ) !important;
+        }
+    }
 }

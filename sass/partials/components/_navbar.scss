@@ -31,8 +31,9 @@
                 padding: 10px 15px;
             }
             .nav-link:hover {
-                background-color: map-get($colors , azul-base );
+                background-image: map-get($colors , radiante-link );
                 color: map-get($colors , blanco );
+                @include animacion (hover-color, 0.8s, 1);
             }
         }
     }
@@ -44,10 +45,8 @@
     .navbar-toggler-icon {
         filter: invert(1) brightness(1000%);
     }
-}
 
-.bg-body-tertiary {
-    background-color: map-get($colors , azul-suave ) !important;
+    background-image: map-get($colors , radiante-nav );
 }
 
 
