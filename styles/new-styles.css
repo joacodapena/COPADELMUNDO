@@ -84,7 +84,6 @@ hr {
 }
 
 footer p {
-  color: #727272;
   font-size: 14px;
   text-align: center;
   padding-top: 50px;
@@ -98,7 +97,6 @@ footer p {
 
 .p2-index {
   margin-bottom: 12px;
-  text-align: start;
 }
 
 .main1 {
@@ -132,10 +130,18 @@ footer p {
   align-items: center;
   grid-template-areas: "main1 video-container video-container" "main2 video-container video-container";
   padding: 24px 0;
-  margin-top: 24px;
+  margin: 24px 0;
 }
 .main-content p {
   font-size: 16px;
+}
+
+.main-content2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 0;
+  margin: 24px 36px 24px 18px;
 }
 
 .h1-historial, .h2-historial {
@@ -146,10 +152,6 @@ footer p {
   text-align: center;
   margin: 0 24px;
   padding-bottom: 26px;
-}
-
-.p2-historial {
-  text-align: start;
 }
 
 .main1-historial {
@@ -229,7 +231,11 @@ table {
 }
 
 .icon {
-  width: 13%;
+  width: 12%;
+}
+
+.icon-c {
+  width: 15%;
 }
 
 .h2-estadisticas {
@@ -268,16 +274,17 @@ table {
 }
 .carousel .caption:hover {
   background-color: rgb(1, 1, 66);
-  color: white;
   padding: 5px 15px;
 }
 
 .cards-est {
   margin: 24px;
 }
+.cards-est .card .icon-d {
+  width: 7.5%;
+}
 
 .h2-datos {
-  text-align: center;
   margin: 12px;
 }
 
@@ -294,17 +301,6 @@ table {
   border-radius: 8px;
 }
 
-.mejores-goles {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.mejores-goles .goles-card {
-  width: 18rem;
-}
-
 .formulario {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -314,7 +310,7 @@ table {
   grid-template-areas: "correo contraseña" "mensaje region" "check check" "boton-enviar boton-enviar";
   padding: 24px;
   margin: 24px;
-  gap: 88px;
+  gap: 60px;
 }
 .formulario .form-control {
   border: var(--bs-border-width) solid rgb(155, 165, 255);
@@ -357,6 +353,28 @@ table {
   justify-content: center;
   align-items: center;
   grid-area: boton-enviar;
+}
+
+.videos-goles {
+  margin: 48px 0;
+}
+.videos-goles h2 {
+  text-align: center;
+  padding-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.mejores-goles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.mejores-goles .goles-card {
+  width: 18rem;
+  background-color: rgb(216, 228, 240);
 }
 
 @media (max-width: 500px) {
@@ -433,15 +451,15 @@ table {
     padding: 1rem;
     margin-left: 8px;
   }
-  .main-estadisticas ol .carousel {
-    width: 100%;
-    padding: 8px;
-  }
   .main-estadisticas ol li {
     font-size: 12px;
   }
   .main-estadisticas ol li .p-est {
     font-size: 12px;
+  }
+  .carousel {
+    width: 100%;
+    padding: 8px;
   }
   h5 {
     font-size: 14px;
@@ -545,6 +563,9 @@ table {
   }
   .main-estadisticas ol li .p-est {
     font-size: 12px;
+  }
+  .cards-est .card .icon-d {
+    width: 5%;
   }
   .card-datos .card-body p {
     font-size: 14px;

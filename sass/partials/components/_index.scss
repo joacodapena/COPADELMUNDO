@@ -7,7 +7,6 @@
 
 .p2-index {
     margin-bottom: 12px;
-    text-align: start;
 }
 
 .main1 {
@@ -35,9 +34,15 @@
     @include grid (repeat(3, 1fr), repeat(2, 250px), center, center, "main1 video-container video-container"
     "main2 video-container video-container");
     padding: 24px 0;
-    margin-top: 24px;
+    margin: 24px 0;
 
     p {
         font-size: map-get($font-sizes , m );
     }
+}
+
+.main-content2 {
+    @include flex (column, center);
+    padding: 24px 0;
+    margin: 24px 36px 24px 18px;
 }

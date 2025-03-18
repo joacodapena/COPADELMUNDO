@@ -37,11 +37,18 @@
     }
     .caption:hover {
         background-color: map-get($colors , azul-base );
-        color: map-get($colors , blanco );
         padding: 5px 15px;
     }
 }
 
 .cards-est {
     margin: 24px;
+
+    .card {
+        .icon-d {
+            width: 7.5%;
+        }
+    }
 }
+
+

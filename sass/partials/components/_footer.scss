@@ -1,7 +1,6 @@
 // Footer
 footer p {
-    color: #727272;
-    font-size: 14px;
+    font-size: map-get($font-sizes , s );
     text-align: center;
     padding-top: 50px;
 }

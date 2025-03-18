@@ -1,6 +1,5 @@
 // Datos
 .h2-datos {
-    text-align: center;
     margin: 12px;
 }
 
@@ -14,15 +13,5 @@
         .video-datos {
             border-radius: $borde-curvo-s;
         }
-    }
-}
-
-.mejores-goles {
-    @include flex (row, center);
-    gap: 24px;
-    flex-wrap: wrap;
-
-    .goles-card {
-        width: 18rem;
     }
 }

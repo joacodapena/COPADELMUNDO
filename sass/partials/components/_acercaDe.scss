@@ -6,7 +6,7 @@
     "boton-enviar boton-enviar");
     padding: 24px;
     margin: 24px;
-    gap: 88px;
+    gap: 60px;
 
     .form-control {
         border: var(--bs-border-width) solid map-get($colors , azul-frio );
@@ -58,4 +58,26 @@
         grid-area: boton-enviar;
     }
 
+}
+
+.videos-goles {
+    margin: 48px 0;
+
+    h2 {
+        text-align: center;
+        padding-bottom: 12px;
+        margin-left: 12px;
+        margin-right: 12px
+    }
+}
+
+.mejores-goles {
+    @include flex (row, center);
+    gap: 24px;
+    flex-wrap: wrap;
+
+    .goles-card {
+        width: 18rem;
+        background-color: map-get($colors , azul-suave );
+    }
 }
