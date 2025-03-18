@@ -8,6 +8,13 @@
 
     <title>Copa Mundial de Fútbol</title>
 
+<!-- Animated -->
+<link
+rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <!-- BOOTSTRAP -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -60,13 +67,13 @@
     
   <main>
     <!-- Texto de bienvenida -->
-     <h1 class="h1-acerca-de">¿Te gustó nuestra página? Por favor deja tu opinión!</h1>
+     <h1 class="h1-acerca-de animate__animated animate__flash animate__delay-1s">¿Te gustó nuestra página? Por favor deja tu opinión!</h1>
      
 
     <!-- Formulario de envío-->
    <section>
     <div class="form-container justify-content-center">
-      <form class="formulario">
+      <form class="formulario animate__animated animate__fadeIn">
         <div class="mb-3 correo">
           <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -120,15 +127,15 @@
         <h2 class="h2-acercade">Quedate para más; aquí verás goles asombrosos de las últimas ediciones.</h2>
 
       <div class="mejores-goles m-3 justify-content-center">
-       <div class="card goles-card">
+       <div data-aos="zoom-in" class="card goles-card">
          <div class="card-body">
            <h5 class="card-title">Goles Sudáfrica 2010 <img class="icon-m" src="../assets/sudafrica (1).png" alt=""></h5>
            <p class="card-text">Mundial de la mítica Jabulani, que fue el balón mas difícil de manejar</p>
-           <a href="https://www.youtube.com/watch?v=PLrQJKU6e-g" class="btn btn-primary">Ver video</a>
+           <a href="https://www.youtube.com/watch?v=PLrQJKU6e-g" class="btn btn-primary boton-goles">Ver video</a>
          </div>
        </div>
  
-       <div class="card goles-card">
+       <div data-aos="zoom-in" class="card goles-card">
          <div class="card-body">
            <h5 class="card-title">Goles Brasil 2014 <img class="icon-m" src="../assets/brasil.png" alt=""></h5>
            <p class="card-text">Torneo lleno de magia y sorpresas, dejando mucho jogo bonito </p>
@@ -136,7 +143,7 @@
          </div>
        </div>
  
-       <div class="card goles-card">
+       <div data-aos="zoom-in" class="card goles-card">
          <div class="card-body">
            <h5 class="card-title">Goles Rusia 2018 <img class="icon-m" src="../assets/rusia.png" alt=""></h5>
            <p class="card-text">Las jovenes promesas y grandes selecciones se hacen fuerte</p>
@@ -144,7 +151,7 @@
          </div>
        </div>
  
-       <div class="card goles-card">
+       <div data-aos="zoom-in" class="card goles-card">
          <div class="card-body">
            <h5 class="card-title">Goles Catar 2022 <img class="icon-m" src="../assets/katar.png" alt=""></h5>
            <p class="card-text">Campeonato mas goleado de los últimos, increibles resultados</p>
@@ -165,6 +172,12 @@
 
 <!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
