@@ -20,10 +20,11 @@
 }
 
 .carousel {
-    width: 80%;
+    width: 90%;
     padding: 20px;
 
     .carousel-img {
+        height: 555px;
         border-radius: $borde-carrusel;
     }
     .caption {

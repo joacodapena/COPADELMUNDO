@@ -293,10 +293,11 @@ table {
 }
 
 .carousel {
-  width: 80%;
+  width: 90%;
   padding: 20px;
 }
 .carousel .carousel-img {
+  height: 555px;
   border-radius: 20px;
 }
 .carousel .caption {
@@ -520,6 +521,9 @@ table {
     width: 100%;
     padding: 8px;
   }
+  .carousel .carousel-img {
+    height: 200px;
+  }
   h5 {
     font-size: 14px;
   }
@@ -617,6 +621,9 @@ table {
     width: 100%;
     padding: 8px;
   }
+  .carousel .carousel-img {
+    height: 300px;
+  }
   .main-estadisticas ol li {
     font-size: 12px;
   }
@@ -674,6 +681,9 @@ table {
   }
   .carousel {
     width: 100%;
+  }
+  .carousel .carousel-img {
+    height: 400px;
   }
   .caption p, .h5-est {
     font-size: 14px;
