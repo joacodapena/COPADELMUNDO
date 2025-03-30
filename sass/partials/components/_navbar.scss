@@ -31,9 +31,9 @@
                 padding: 10px 15px;
             }
             .nav-link:hover {
-                background-image: map-get($colors , radiante-link );
+                background-color: map-get($colors , azul-base);
                 color: map-get($colors , blanco );
-                @include animacion (hover-color, 0.8s, 1);
+                @include animacion (hover-color, 0.25s, 1);
             }
         }
     }

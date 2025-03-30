@@ -9,6 +9,33 @@
   0% {
     opacity: 0;
   }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
   100% {
     opacity: 1;
   }
@@ -78,10 +105,10 @@ hr {
   padding: 10px 15px;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  background-image: linear-gradient(to top, rgb(1, 1, 66), rgb(76, 0, 255));
+  background-color: rgb(1, 1, 66);
   color: white;
   animation-name: hover-color;
-  animation-duration: 0.8s;
+  animation-duration: 0.25s;
   animation-iteration-count: 1;
 }
 .navbar .navbar-toggler {
@@ -281,11 +308,15 @@ table {
   font-size: 16px;
 }
 .carousel .caption:hover {
-  background-image: linear-gradient(to top, rgb(1, 1, 66), rgb(76, 0, 255));
-  padding: 5px 15px;
+  background-image: radial-gradient(closest-side, rgb(235, 241, 247), rgb(216, 228, 240), rgb(198, 225, 252));
+  color: rgb(1, 1, 66);
+  padding: 15px 15px 0 15px;
   animation-name: hover-color;
-  animation-duration: 0.6s;
+  animation-duration: 0.2s;
   animation-iteration-count: 1;
+}
+.carousel .caption:hover p {
+  color: rgb(1, 1, 66);
 }
 
 .cards-est {
@@ -296,9 +327,9 @@ table {
 }
 .cards-est .card:hover {
   color: white;
-  background-image: radial-gradient(closest-side, rgb(155, 165, 255), rgb(76, 0, 255), rgb(1, 1, 66));
+  background-image: linear-gradient(to top, rgb(1, 1, 66), rgb(0, 37, 202), rgb(92, 63, 255));
   animation-name: hover-color;
-  animation-duration: 0.6s;
+  animation-duration: 0.3s;
   animation-iteration-count: 1;
 }
 
@@ -320,13 +351,13 @@ table {
 }
 .main-datos .card-datos:hover {
   color: white;
-  background-image: radial-gradient(closest-side, rgb(155, 165, 255), rgb(76, 0, 255), rgb(1, 1, 66));
+  background-image: radial-gradient(closest-side, rgb(214, 218, 255), rgb(155, 165, 255), rgb(82, 122, 255), rgb(84, 95, 255), rgb(24, 24, 196), rgb(1, 1, 184), rgb(0, 0, 145), rgb(0, 0, 119));
   animation-name: hover-color;
-  animation-duration: 0.6s;
+  animation-duration: 0.3s;
   animation-iteration-count: 1;
 }
-.main-datos .card-datos:hover .card-text, .main-datos .card-datos:hover .text-body-secondary {
-  color: white !important;
+.main-datos .card-datos:hover .card-text {
+  color: white;
 }
 
 .formulario {

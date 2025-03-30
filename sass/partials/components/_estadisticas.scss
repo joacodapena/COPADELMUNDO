@@ -36,9 +36,14 @@
         }
     }
     .caption:hover {
-        background-image: map-get($colors , radiante-link );
-        padding: 5px 15px;
-        @include animacion (hover-color, 0.6s, 1)
+        background-image: map-get($colors , radiante-car);
+        color: map-get($colors , azul-base );
+        padding: 15px 15px 0 15px;
+        @include animacion (hover-color, 0.2s, 1);
+
+        p {
+            color: map-get($colors , azul-base );
+        }
     }
 }
 
@@ -53,8 +58,8 @@
 
     .card:hover {
         color: map-get($colors , blanco );
-        background-image: map-get($colors , radiante-azul );
-        @include animacion (hover-color, 0.6s, 1)
+        background-image: map-get($colors , radiante-link );
+        @include animacion (hover-color, 0.3s, 1)
     }
 }
 

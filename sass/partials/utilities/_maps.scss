@@ -7,9 +7,10 @@ $colors: (
     azul-frio: rgb(155, 165, 255),
     azul-calido: rgb(76, 0, 255),
     azul-suave: rgb(216, 228, 240),
-    radiante-azul: radial-gradient(closest-side, rgb(155, 165, 255), rgb(76, 0, 255), rgb(1, 1, 66)),
+    radiante-azul: radial-gradient(closest-side, rgb(214, 218, 255), rgb(155, 165, 255), rgb(82, 122, 255), rgb(84, 95, 255), rgb(24, 24, 196), rgb(1, 1, 184), rgb(0, 0, 145), rgb(0, 0, 119)),
     radiante-nav: linear-gradient(to bottom, #f3f3f3, rgb(216, 228, 240)),
-    radiante-link: linear-gradient(to top,  rgb(1, 1, 66), rgb(76, 0, 255)),
+    radiante-car: radial-gradient(closest-side, rgb(235, 241, 247), rgb(216, 228, 240), rgb(198, 225, 252)),
+    radiante-link: linear-gradient(to top,  rgb(1, 1, 66), rgb(0, 37, 202), rgb(92, 63, 255)),
     );
 
 $font-sizes: (
