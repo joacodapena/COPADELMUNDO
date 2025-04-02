@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
   <!-- Metadatos del documento -->
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <title>Copa Mundial de Fútbol</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Opinión de fútbol, Mensaje, Región, Formulario, Información de Mundial, Mejores goles, Goles históricos, Fútbol internacional">
+  <meta name="description" content="Revive la emoción de la Copa Mundial de Fútbol con los mejores goles de las últimas ediciones. Recordá partidos y resultados históricos y comparte tu opinión sobre el torneo más apasionante del mundo.">
+  <title>Copa Mundial de Fútbol</title>
 
   <!-- Animated -->
   <link
@@ -76,18 +77,23 @@
       <form class="formulario animate__animated animate__fadeIn">
         <div class="mb-3 correo">
           <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input type="email" class="form-control form-place" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email...">
           <div id="emailHelp" class="form-text">No compartiremos tu dirección con nadie más</div>
         </div>
+
+        <div class="mb-3 nombre-completo">
+          <label for="formGroupExampleInput" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control form-place" id="formGroupExampleInput" placeholder="Nombre y apellido...">
+        </div>
   
-        <div class="mb-3 contraseña">
+        <!-- <div class="mb-3 contraseña">
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
+        </div> -->
   
         <div class="mb-3 mensaje">
           <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control form-place" id="exampleFormControlTextarea1" rows="3" placeholder="Deje su mensaje aquí..."></textarea>
         </div>
   
       <div class="sel-region">
@@ -124,14 +130,14 @@
     <section>
        <!-- Videos de mejores goles -->
        <div class="videos-goles">
-        <h2 class="h2-acercade">Quedate para más; aquí verás goles asombrosos de las últimas ediciones.</h2>
+        <h2 class="h2-acercade">Quedate para más, los mejores goles de los últimos Mundiales.</h2>
 
       <div class="mejores-goles m-3 justify-content-center">
        <div data-aos="zoom-in" class="card goles-card">
          <div class="card-body">
            <h5 class="card-title">Goles Sudáfrica 2010 <img class="icon-m" src="../assets/sudafrica (1).png" alt=""></h5>
            <p class="card-text">Mundial de la mítica Jabulani, que fue el balón mas difícil de manejar</p>
-           <a href="https://www.youtube.com/watch?v=PLrQJKU6e-g" class="btn btn-primary boton-goles">Ver video</a>
+           <a href="https://www.youtube.com/watch?v=PLrQJKU6e-g" class="btn btn-primary boton-goles animate__animated">Ver video</a>
          </div>
        </div>
  
@@ -139,7 +145,7 @@
          <div class="card-body">
            <h5 class="card-title">Goles Brasil 2014 <img class="icon-m" src="../assets/brasil.png" alt=""></h5>
            <p class="card-text">Torneo lleno de magia y sorpresas, dejando mucho jogo bonito </p>
-           <a href="https://www.youtube.com/watch?v=c0cUE-ePDEc" class="btn btn-primary">Ver video</a>
+           <a href="https://www.youtube.com/watch?v=c0cUE-ePDEc" class="btn btn-primary boton-goles animate__animated">Ver video</a>
          </div>
        </div>
  
@@ -147,7 +153,7 @@
          <div class="card-body">
            <h5 class="card-title">Goles Rusia 2018 <img class="icon-m" src="../assets/rusia.png" alt=""></h5>
            <p class="card-text">Las jovenes promesas y grandes selecciones se hacen fuerte</p>
-           <a href="https://www.youtube.com/watch?v=Vw34wMAqWzc" class="btn btn-primary">Ver video</a>
+           <a href="https://www.youtube.com/watch?v=Vw34wMAqWzc" class="btn btn-primary boton-goles animate__animated">Ver video</a>
          </div>
        </div>
  
@@ -155,7 +161,7 @@
          <div class="card-body">
            <h5 class="card-title">Goles Catar 2022 <img class="icon-m" src="../assets/katar.png" alt=""></h5>
            <p class="card-text">Campeonato mas goleado de los últimos, increibles resultados</p>
-           <a href="https://www.youtube.com/watch?v=QtSMXXJq11Q" class="btn btn-primary">Ver video</a>
+           <a href="https://www.youtube.com/watch?v=QtSMXXJq11Q" class="btn btn-primary boton-goles animate__animated">Ver video</a>
          </div>
        </div>
       </div>

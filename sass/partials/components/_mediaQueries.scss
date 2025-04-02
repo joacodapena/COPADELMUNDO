@@ -147,7 +147,7 @@
     }
 
     // Acerca De
-    .formulario, .label.region {
+    .formulario, .label-region {
         padding: 0;
     }
     .form-label {
@@ -156,7 +156,7 @@
     #emailHelp {
         font-size: map-get($font-sizes , formulario );
     }
-    #seleccionar-region, footer p {
+    #seleccionar-region, footer p, .form-place{
         font-size: map-get($font-sizes , xxs );
     }
     .form-check-label {

@@ -1,6 +1,6 @@
 // Acerca De
 .formulario {
-    @include grid (repeat(2, 1fr), 100px 150px 50px 50px, center, start, "correo contraseña"
+    @include grid (repeat(2, 1fr), 100px 150px 50px 50px, center, start, "nombre-completo correo"
     "mensaje region"
     "check check"
     "boton-enviar boton-enviar");
@@ -22,8 +22,8 @@
         grid-area: correo;
     }
 
-    .contraseña {
-        grid-area: contraseña;
+    .nombre-completo {
+        grid-area: nombre-completo;
     }
 
     .mensaje {
@@ -43,6 +43,10 @@
 
     .checkbox {
         grid-area: check;
+    }
+
+    .form-check-input {
+        border: 1px, solid, map-get($colors , azul-frio );
     }
 
     .boton-enviar {
@@ -79,5 +83,9 @@
     .goles-card {
         width: 18rem;
         background-color: map-get($colors , azul-suave );
+    }
+
+    .boton-goles:hover {
+        animation: tada 1s ease;
     }
 }

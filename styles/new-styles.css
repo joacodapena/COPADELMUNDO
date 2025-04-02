@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css2?family=Overlock+SC&family=Overpass:ital,wght@0,100..900;1,100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap);
 * {
   margin: 0;
@@ -367,7 +366,7 @@ table {
   grid-template-rows: 100px 150px 50px 50px;
   justify-content: center;
   align-items: start;
-  grid-template-areas: "correo contraseña" "mensaje region" "check check" "boton-enviar boton-enviar";
+  grid-template-areas: "nombre-completo correo" "mensaje region" "check check" "boton-enviar boton-enviar";
   padding: 24px;
   margin: 24px;
   gap: 60px;
@@ -383,8 +382,8 @@ table {
 .formulario .correo {
   grid-area: correo;
 }
-.formulario .contraseña {
-  grid-area: contraseña;
+.formulario .nombre-completo {
+  grid-area: nombre-completo;
 }
 .formulario .mensaje {
   grid-area: mensaje;
@@ -400,6 +399,9 @@ table {
 }
 .formulario .checkbox {
   grid-area: check;
+}
+.formulario .form-check-input {
+  border: 1px, solid, rgb(155, 165, 255);
 }
 .formulario .boton-enviar {
   background-color: rgb(76, 0, 255);
@@ -435,6 +437,9 @@ table {
 .mejores-goles .goles-card {
   width: 18rem;
   background-color: rgb(216, 228, 240);
+}
+.mejores-goles .boton-goles:hover {
+  animation: tada 1s ease;
 }
 
 @media (max-width: 500px) {
@@ -542,7 +547,7 @@ table {
   .goles-card p {
     font-size: 12px;
   }
-  .formulario, .label.region {
+  .formulario, .label-region {
     padding: 0;
   }
   .form-label {
@@ -551,7 +556,7 @@ table {
   #emailHelp {
     font-size: 8px;
   }
-  #seleccionar-region, footer p {
+  #seleccionar-region, footer p, .form-place {
     font-size: 10px;
   }
   .form-check-label {
