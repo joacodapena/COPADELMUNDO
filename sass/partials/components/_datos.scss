@@ -17,7 +17,7 @@
 
     .card-datos:hover {
         color: map-get($colors , blanco );
-        background-image: map-get($colors , radiante-azul );
+        background-image: map-get($colors , radiante-link );
         @include animacion (hover-color, 0.3s, 1);
 
         .card-text{

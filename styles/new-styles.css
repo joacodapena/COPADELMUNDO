@@ -351,7 +351,7 @@ table {
 }
 .main-datos .card-datos:hover {
   color: white;
-  background-image: radial-gradient(closest-side, rgb(214, 218, 255), rgb(155, 165, 255), rgb(82, 122, 255), rgb(84, 95, 255), rgb(24, 24, 196), rgb(1, 1, 184), rgb(0, 0, 145), rgb(0, 0, 119));
+  background-image: linear-gradient(to top, rgb(1, 1, 66), rgb(0, 37, 202), rgb(92, 63, 255));
   animation-name: hover-color;
   animation-duration: 0.3s;
   animation-iteration-count: 1;
